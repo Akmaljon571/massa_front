@@ -7,12 +7,11 @@ import img3_1 from '../../img/img3-1.png'
 import img3_2 from '../../img/img3-2.png'
 import img4_1 from '../../img/img4-1.png'
 import img4_2 from '../../img/img4-2.png'
-import Container from "../container/container";
 import './hero.scss'
 
 function Hero() {
     return (  
-        <Container>
+        <>
             <Line>all menu</Line>
             <ul className="hero">
                 <li className="item1">
@@ -32,7 +31,7 @@ function Hero() {
                     <img src={img4_1} alt="Images" />
                 </li>
             </ul>
-        </Container>
+        </>
     );
 }
 

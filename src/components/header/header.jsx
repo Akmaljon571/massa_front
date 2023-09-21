@@ -1,4 +1,3 @@
-import Container from '../container/container'
 import like from '../../img/like.svg'
 import order from '../../img/shop.svg'
 import profile from '../../img/person.svg'
@@ -19,7 +18,7 @@ function Header() {
     }, [setCategory]);
 
     return (
-        <Container>
+        <>
             <header className="header">
                 <div className="header_left">
                     <a href="/">
@@ -60,7 +59,7 @@ function Header() {
                     </div>
                 </div>
             </header>
-        </Container> 
+        </> 
     )
 }
 

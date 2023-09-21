@@ -3,7 +3,6 @@ import yozuv from '../../img/Group 48097759.png'
 import rasm from '../../img/IMAGE_2022-10-29_15_55_14_1-removebg-preview 1.png'
 import yozuvMedia from '../../img/media1.png'
 import yozuvMediaBtn from '../../img/media2.png'
-import Container from '../container/container';
 import { useState } from 'react';
 
 function Carousel() {
@@ -17,7 +16,7 @@ function Carousel() {
         }
     }, 5000);
     return (  
-        <Container>
+        <>
             <ul className='carousel-list'>
                 <li className={active === 1 ? 'list-active' : ''}></li>
                 <li className={active === 2 ? 'list-active' : ''}></li>
@@ -74,7 +73,7 @@ function Carousel() {
                     <img src={rasm} alt="Rasm" />
                 </li>
             </ul>
-        </Container>
+        </>
     );
 }
 
