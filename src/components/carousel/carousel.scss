@@ -4,6 +4,7 @@
     display: flex;
     gap: 10px;
     overflow: hidden;
+    position: relative;
 
     li {
         display: flex;
@@ -13,9 +14,47 @@
         align-items: center;
         justify-content: space-between;
         padding: 30px 10px 0 65px;
+        transition: all 1s;
     }
 
-    .active {
+    .left-none {
+        position: absolute;
+        z-index: -100;
         margin-left: 100%;
+    }
+
+    .right-none {
+        position: absolute;
+        margin-left: -100%;
+    }
+    
+    .active {
+        margin: 0; 
+    }
+}
+
+.carousel-list {
+    width: 100px;
+    display: flex;
+    margin-top: -18px;
+    margin-bottom: 10px;
+    height: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+
+    li {
+        border-radius: 10px;
+        width: 8px;
+        height: 8px;
+        background-color: #C0C0BE;
+        transition: all 1s;
+    }
+
+    .list-active {
+        border-radius: 10px;
+        width: 40px;
+        height: 8px;
+        background-color: white;
     }
 }

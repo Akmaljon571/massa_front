@@ -14,31 +14,37 @@ function Carousel() {
             setActive(active + 1)
         }
     }, 5000);
-    console.log(active)
     return (  
         <Container>
+            <ul className='carousel-list'>
+                <li className={active === 1 ? 'list-active' : ''}></li>
+                <li className={active === 2 ? 'list-active' : ''}></li>
+                <li className={active === 3 ? 'list-active' : ''}></li>
+                <li className={active === 4 ? 'list-active' : ''}></li>
+                <li className={active === 5 ? 'list-active' : ''}></li>
+            </ul>
             <ul className='carousel'>
-                <li className={active === 1 ? 'active' : ''}>
+                <li className={active === 1 ? 'active' : active === 5 ? 'left-none' : 'right-none'}>
                     1
                     <img src={yozuv} alt="Yozuv" />
                     <img src={rasm} alt="Rasm" />
                 </li>
-                <li className={active === 2 ? 'active' : ''}>
+                <li className={active === 2 ? 'active' : active === 1 ? 'left-none' : 'right-none'}>
                     2
                     <img src={yozuv} alt="Yozuv" />
                     <img src={rasm} alt="Rasm" />
                 </li>
-                <li className={active === 3 ? 'active' : ''}>
+                <li className={active === 3 ? 'active' : active === 2 ? 'left-none' : 'right-none'}>
                     3
                     <img src={yozuv} alt="Yozuv" />
                     <img src={rasm} alt="Rasm" />
                 </li>
-                <li className={active === 4 ? 'active' : ''}>
+                <li className={active === 4 ? 'active' : active === 3 ? 'left-none' : 'right-none'}>
                     4
                     <img src={yozuv} alt="Yozuv" />
                     <img src={rasm} alt="Rasm" />
                 </li>
-                <li className={active === 5 ? 'active' : ''}>
+                <li className={active === 5 ? 'active' : active === 4 ? 'left-none' : 'right-none'}>
                     5
                     <img src={yozuv} alt="Yozuv" />
                     <img src={rasm} alt="Rasm" />
