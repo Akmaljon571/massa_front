@@ -1,4 +1,4 @@
-.carousel {
+.carousel, .carousel_media {
     background-color: #ccc;
     border-radius: 24px;
     display: flex;
@@ -34,6 +34,10 @@
     }
 }
 
+.carousel_media {
+    display: none;
+}
+
 .carousel-list {
     width: 100px;
     display: flex;
@@ -57,5 +61,47 @@
         width: 40px;
         height: 8px;
         background-color: white;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .carousel {
+        display: none;
+    }
+
+    .carousel_media {
+        display: flex;
+        margin-bottom: 48px !important;
+
+        li {
+            position: relative;
+            height: 344px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            
+            .yozuv1 {
+                width: 300px !important;
+                height: 82px !important;
+                margin-bottom: -15px;
+                margin-left: 20px;
+                margin-right: 10px;
+            }
+
+            .yozuv2 {
+                position: absolute;
+                width: 140px;
+                height: 48px;
+                top: 145px;
+                left: 15px;
+            }
+
+            img {
+                width: 234px;
+                height: 240px;
+            }
+        }
     }
 }

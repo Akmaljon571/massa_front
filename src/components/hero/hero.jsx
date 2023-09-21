@@ -20,11 +20,11 @@ function Hero() {
                     <img src={img1_1} alt="Images" />
                 </li>
                 <li className="item2">
-                    <img src={img2_2} alt="Images" />
+                    <img className="a" src={img2_2} alt="Images" />
                     <img src={img2_1} alt="Images" />
                 </li>
                 <li className="item3">
-                    <img src={img3_2} alt="Images" />
+                    <img className="a" src={img3_2} alt="Images" />
                     <img src={img3_1} alt="Images" />
                 </li>
                 <li className="item4">

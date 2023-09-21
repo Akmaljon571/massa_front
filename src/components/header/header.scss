@@ -46,6 +46,10 @@
         }
     }
 
+    &_media {
+        display: none;
+    }
+
     &_right {
         display: flex;
         align-items: center;
@@ -67,6 +71,46 @@
         hr {
             height: 20px;
             border: 1px solid #80808037;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .header {
+        margin-bottom: 60px;
+
+        &_left {
+            display: none;
+        }
+
+        &_media {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-right: 30px;
+            font-family: PP Formula;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        &_right {
+            gap: 10px;
+
+            .hr {
+                display: none;
+            }
+        }
+
+        &_page {
+            gap: 10px;
+        }
+
+        i {
+            display: none;
         }
     }
 }

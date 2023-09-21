@@ -34,6 +34,14 @@ function Header() {
                         )) : null}
                     </ul>
                 </div>
+                <div className="header_media">
+                    <a href="/">
+                        <img src={logo} alt="Logo" />
+                    </a>
+                    <div>
+                        Menu
+                    </div>
+                </div>
                 <div className="header_right">
                     <i>English</i>
                     <hr className='hr' />

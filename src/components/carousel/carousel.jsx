@@ -1,6 +1,8 @@
 import './carousel.scss'
 import yozuv from '../../img/Group 48097759.png'
 import rasm from '../../img/IMAGE_2022-10-29_15_55_14_1-removebg-preview 1.png'
+import yozuvMedia from '../../img/media1.png'
+import yozuvMediaBtn from '../../img/media2.png'
 import Container from '../container/container';
 import { useState } from 'react';
 
@@ -25,28 +27,50 @@ function Carousel() {
             </ul>
             <ul className='carousel'>
                 <li className={active === 1 ? 'active' : active === 5 ? 'left-none' : 'right-none'}>
-                    1
-                    <img src={yozuv} alt="Yozuv" />
+                    <img className='yozuv1' src={yozuv} alt="Yozuv" />
                     <img src={rasm} alt="Rasm" />
                 </li>
                 <li className={active === 2 ? 'active' : active === 1 ? 'left-none' : 'right-none'}>
-                    2
-                    <img src={yozuv} alt="Yozuv" />
+                    <img className='yozuv1' src={yozuv} alt="Yozuv" />
                     <img src={rasm} alt="Rasm" />
                 </li>
                 <li className={active === 3 ? 'active' : active === 2 ? 'left-none' : 'right-none'}>
-                    3
-                    <img src={yozuv} alt="Yozuv" />
+                    <img className='yozuv1' src={yozuv} alt="Yozuv" />
                     <img src={rasm} alt="Rasm" />
                 </li>
                 <li className={active === 4 ? 'active' : active === 3 ? 'left-none' : 'right-none'}>
-                    4
-                    <img src={yozuv} alt="Yozuv" />
+                    <img className='yozuv1' src={yozuv} alt="Yozuv" />
                     <img src={rasm} alt="Rasm" />
                 </li>
                 <li className={active === 5 ? 'active' : active === 4 ? 'left-none' : 'right-none'}>
-                    5
-                    <img src={yozuv} alt="Yozuv" />
+                    <img className='yozuv1' src={yozuv} alt="Yozuv" />
+                    <img src={rasm} alt="Rasm" />
+                </li>
+            </ul>
+            <ul className='carousel_media'>
+                <li className={active === 1 ? 'active' : active === 5 ? 'left-none' : 'right-none'}>
+                    <img className='yozuv1' src={yozuvMedia} alt="Yozuv" />
+                    <img className='yozuv2' src={yozuvMediaBtn} alt="Yozuv" />
+                    <img src={rasm} alt="Rasm" />
+                </li>
+                <li className={active === 2 ? 'active' : active === 1 ? 'left-none' : 'right-none'}>
+                    <img className='yozuv1' src={yozuvMedia} alt="Yozuv" />
+                    <img className='yozuv2' src={yozuvMediaBtn} alt="Yozuv" />
+                    <img src={rasm} alt="Rasm" />
+                </li>
+                <li className={active === 3 ? 'active' : active === 2 ? 'left-none' : 'right-none'}>
+                    <img className='yozuv1' src={yozuvMedia} alt="Yozuv" />
+                    <img className='yozuv2' src={yozuvMediaBtn} alt="Yozuv" />
+                    <img src={rasm} alt="Rasm" />
+                </li>
+                <li className={active === 4 ? 'active' : active === 3 ? 'left-none' : 'right-none'}>
+                    <img className='yozuv1' src={yozuvMedia} alt="Yozuv" />
+                    <img className='yozuv2' src={yozuvMediaBtn} alt="Yozuv" />
+                    <img src={rasm} alt="Rasm" />
+                </li>
+                <li className={active === 5 ? 'active' : active === 4 ? 'left-none' : 'right-none'}>
+                    <img className='yozuv1' src={yozuvMedia} alt="Yozuv" />
+                    <img className='yozuv2' src={yozuvMediaBtn} alt="Yozuv" />
                     <img src={rasm} alt="Rasm" />
                 </li>
             </ul>
