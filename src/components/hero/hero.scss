@@ -1,0 +1,36 @@
+.hero {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 80px;
+
+    .item1, .item4 {
+        background-color: #EBEBEB;
+        border-radius: 24px;
+        width: 676px;
+        height: 250px;
+        padding: 11px 68px 0 40px;
+        display: flex;
+        align-items: flex-end;
+        gap: 70px;
+
+        .a {
+            margin-bottom: 109px;
+        }
+    }
+
+    .item2, .item3 {
+        width: 676px;
+        height: 344px;
+        background-color: #EBEBEB;
+        border-radius: 24px;
+        padding: 20px 108px 4px 40px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .item3 {
+        margin-top: -94px;
+    }
+}

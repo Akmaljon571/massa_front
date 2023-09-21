@@ -1,0 +1,20 @@
+.line {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #999999;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    gap: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    justify-content: space-between;
+    white-space: nowrap;
+    margin-bottom: 16px;
+
+    hr {
+        width: 100%;
+        border: 1px solid #333333;
+    }
+}
