@@ -60,3 +60,53 @@
         }
     }
 }
+
+@media screen and (max-width: 360px) {
+    .footer {
+
+        &_top {
+            position: relative;
+            flex-direction: column;
+            padding: 29px 4px 0 17px;
+            height: 388px;
+            align-items: flex-end;
+
+            .zood {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 34px;
+                letter-spacing: 0em;
+                margin-bottom: 17px;
+
+                img {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+
+            .bilan { 
+                font-size: 36px;
+                font-weight: 800;
+                line-height: 50px;
+                letter-spacing: 0em;
+                margin-right: -100px;                
+                
+                button {
+                    width: 132px;
+                    padding: 8px 20px;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 28px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+            }
+        }
+
+        &_img {
+            width: 272px;
+            height: 216px;
+            margin-top: -27px;
+        }
+    }
+}
