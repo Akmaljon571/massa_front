@@ -2,6 +2,7 @@ import Line from "../../html/line";
 import see from '../../img/by brand.svg'
 import vector from '../../img/vector-qora.svg'
 import brand from '../../img/brand.png'
+import brandMedia from '../../img/brand-media.png'
 import './brand.scss'
 
 function Brand() {
@@ -17,6 +18,7 @@ function Brand() {
                     </button>
                 </div>
                 <img className="right" src={brand} alt="brand" />
+                <img className="right-media" src={brandMedia} alt="brand media" />
             </div>
         </section>
     );

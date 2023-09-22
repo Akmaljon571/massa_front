@@ -31,4 +31,49 @@
     .right {
         width: 874px;
     }
+
+    .right-media {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .brand {
+        flex-direction: column;
+        gap: 26px;
+
+        .left {
+            width: 300px;
+            position: relative;
+
+            h2 {
+                font-size: 40px;
+                font-weight: 600;
+                line-height: 53px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+            button {
+                padding: 15px 0 15px 18px;
+                position: absolute;
+                top: 54px;
+                right: -25px;
+
+                img {
+                    height: 10px;
+                    margin-right: 18px;
+                }
+            }
+        }
+
+        .right {
+            display: none;
+        }
+    
+        .right-media {
+            display: block;
+            width: 330px;
+        }
+    } 
 }
