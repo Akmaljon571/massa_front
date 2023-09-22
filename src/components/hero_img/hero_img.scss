@@ -86,3 +86,133 @@
         }
     }
 }
+
+@media screen and (max-width: 360px) {
+    .heroImg {
+        flex-direction: column;
+        gap: 26px;
+
+        .left {
+            width: 300px;
+            position: relative;
+
+            h2 {
+                font-size: 35px;
+                font-weight: 600;
+                line-height: 53px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+            button {
+                padding: 15px 0 15px 18px;
+                position: absolute;
+                top: 54px;
+                right: -25px;
+
+                img {
+                    height: 10px;
+                    margin-right: 18px;
+                }
+            }
+        }
+
+        .right {
+            position: relative;
+            height: 670px;
+
+            .img1 {
+                width: 204px;
+                height: 112px;
+
+                img {
+                    width: 120px;
+                    height: 100px;
+                }
+            }
+
+            .img2 {
+                width: 112px;
+                height: 112px;
+
+                img {
+                    width: 112px;
+                    height: 112px;
+                }
+            }
+            
+            .img3 {
+                position: absolute;
+                top: 350px;
+                width: 206px;
+                height: 224px;
+
+                img {
+                    width: 140px;
+                    height: 190px;
+                }
+            }
+            
+            .img4 {
+                position: absolute;
+                right: 0;
+                top: 350px;
+                width: 112px;
+                height: 224px;
+
+                img {
+                    width: 112px;
+                    height: 194px;
+                }
+            }
+
+            .img5 {
+                width: 108px;
+                height: 224px;
+                margin: 0 !important;
+                position: absolute;
+                top: 120px;
+
+                img {
+                    width: 108px;
+                    height: 224px;
+                }
+            }
+
+            .img6 {
+                position: absolute;
+                top: 270px;
+                right: 0;
+                width: 210px;
+                height: 224px;
+
+                img {
+                    width: 210px;
+                    height: 224px;
+                }
+            }
+
+            .img7 {
+                position: absolute;
+                top: 580px;
+                width: 112px;
+
+
+                img {
+                    width: 112px;
+                }
+            }
+
+            .img8 {
+                position: absolute;
+                top: 580px;
+                width: 206px;
+                right: 0;
+
+                img {
+                    width: 180px;
+                }
+            }
+        }
+    }
+}
