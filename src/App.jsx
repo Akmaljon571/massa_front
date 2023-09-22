@@ -1,11 +1,11 @@
-import { Home } from './page';
 import './App.scss';
 import { Container } from './components';
+import Routers from './routes/routes';
 
 function App() {
     return (
       <Container>
-        <Home />
+        <Routers />
       </Container>
     )
 }

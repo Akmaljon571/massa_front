@@ -1,4 +1,5 @@
 import { Header, Main, Footer, Carousel, Hero, HeroImg, Brand } from '../../components'
+import Acessuars from '../../html/acessuars';
 import HomePro from '../../html/home-pro';
 
 function Home() {
@@ -11,6 +12,7 @@ function Home() {
                 <HeroImg />
                 <HomePro />
                 <Brand />
+                <Acessuars />
             </Main>
             <Footer />
        </>

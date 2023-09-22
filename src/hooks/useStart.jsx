@@ -2,9 +2,9 @@ import { useContext } from "react";
 import { State } from '../content/start'
 
 function useStart() {
-   const {token, setToken} = useContext(State)
+   const {token, setToken, page, setPage} = useContext(State)
 
-   return {token, setToken}
+   return {token, setToken, page, setPage}
 }
 
 export default useStart;

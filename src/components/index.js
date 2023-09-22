@@ -7,6 +7,7 @@ import Hero from "./hero/hero";
 import HeroImg from "./hero_img/hero_img";
 import Brand from "./brand/brand";
 import Products from "./products/products";
+import Pagination from "./pagination/pagination";
 
 export { 
     Header, 
@@ -17,5 +18,6 @@ export {
     Hero,
     HeroImg,
     Brand,
-    Products
+    Products,
+    Pagination
 }

@@ -9,7 +9,7 @@ function Products({ children }) {
     const [product, setProduct] = useState([]);
     const page = children.split(',')[0]
     const nechta = children.split(',')[1]
-    const category = children.split(',')[2] || ''
+    const category = children.split(', ')[2] || ''
     const navigate = useNavigate()
 
     // const clickLike = () => {
@@ -18,7 +18,8 @@ function Products({ children }) {
 
     useEffect(() => {
         if (category) {
-            fetch(api + `product/${category}?son=${nechta}&page=${page}`)
+            const a = `product/${category}?son=${nechta}&page=${page}`
+            fetch(api + a)
             .then(re => re.json())
             .then(data => setProduct(data))
         } else  {
