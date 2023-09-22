@@ -1,4 +1,4 @@
-import { Header, Main, Footer, Carousel, Hero, HeroImg } from '../../components'
+import { Header, Main, Footer, Carousel, Hero, HeroImg, Brand } from '../../components'
 
 function Home() {
     return ( 
@@ -7,6 +7,7 @@ function Home() {
             <Carousel />
             <Hero />
             <HeroImg />
+            <Brand />
             <Main />
             <Footer />
        </>
