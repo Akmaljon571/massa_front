@@ -11,7 +11,7 @@ import './hero.scss'
 
 function Hero() {
     return (  
-        <>
+        <section>
             <Line>all menu</Line>
             <ul className="hero">
                 <li className="item1">
@@ -31,7 +31,7 @@ function Hero() {
                     <img src={img4_1} alt="Images" />
                 </li>
             </ul>
-        </>
+        </section>
     );
 }
 

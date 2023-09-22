@@ -4,6 +4,7 @@ import Main from "./main/main";
 import Container from "./container/container";
 import Carousel from "./carousel/carousel";
 import Hero from "./hero/hero";
+import HeroImg from "./hero_img/hero_img";
 
 export { 
     Header, 
@@ -11,5 +12,6 @@ export {
     Footer,
     Container,
     Carousel,
-    Hero
+    Hero,
+    HeroImg
 }

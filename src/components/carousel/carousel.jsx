@@ -16,7 +16,7 @@ function Carousel() {
         }
     }, 5000);
     return (  
-        <>
+        <section>
             <ul className='carousel-list'>
                 <li className={active === 1 ? 'list-active' : ''}></li>
                 <li className={active === 2 ? 'list-active' : ''}></li>
@@ -73,7 +73,7 @@ function Carousel() {
                     <img src={rasm} alt="Rasm" />
                 </li>
             </ul>
-        </>
+        </section>
     );
 }
 
