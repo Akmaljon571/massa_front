@@ -3,6 +3,7 @@ import order from '../../img/shop.svg'
 import profile from '../../img/person.svg'
 import logo from '../../img/logo.svg'
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { api } from '../../content/start';
 import './header.scss'
 
@@ -21,22 +22,22 @@ function Header() {
         <>
             <header className="header">
                 <div className="header_left">
-                    <a href="/">
+                    <Link to="/">
                         <img src={logo} alt="Logo" />
-                    </a>
+                    </Link>
                     <ul>
                         {category?.length ? category.map(e => (
                             <li key={e._id}>
                                 <hr />
-                                <a href={`/category/${e._id}`}>{e.title}</a>
+                                <Link to={`/category/${e._id}`}>{e.title}</Link>
                             </li>
                         )) : null}
                     </ul>
                 </div>
                 <div className="header_media">
-                    <a href="/">
+                    <Link to="/">
                         <img src={logo} alt="Logo" />
-                    </a>
+                    </Link>
                     <div>
                         Menu
                     </div>
@@ -45,17 +46,17 @@ function Header() {
                     <i>English</i>
                     <hr className='hr' />
                     <div className="header_page">
-                        <a href="/profile">
+                        <Link to="/profile">
                             <img src={profile} alt="Profile icon" />
-                        </a>
+                        </Link>
                         <hr />
-                        <a href="/like">
+                        <Link to="/like">
                             <img src={like} alt="like icon" />
-                        </a>
+                        </Link>
                         <hr />
-                        <a href="/order">
+                        <Link to="/order">
                             <img src={order} alt="Order icon" />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </header>
