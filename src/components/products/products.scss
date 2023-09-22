@@ -117,3 +117,66 @@
         }
     }
 }
+
+@media screen and (max-width: 360px) {
+    .products {
+        &-card {
+            width: 160px;
+            height: 254px;
+
+            .top {
+                width: 160px;
+                height: 160px;
+
+                .main-img {
+                    width: 132px;
+                    height: 120px;
+                }
+            }
+
+            .bottom {
+                height: 130px;
+                padding: 12px;
+                padding-top: 47px;
+
+                h3 {
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: 14px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+
+                p {
+                    font-size: 12px;
+                    font-weight: 600;
+                    line-height: 14px;
+                    letter-spacing: 0em;
+                    text-align: left;   
+                    display: flex;
+                    align-items: flex-end;
+                    
+                    del {
+                        font-size: 10px;
+                        font-weight: 400;
+                        line-height: 12px;
+                        letter-spacing: 0.02em;
+                        text-align: left;  
+                        margin-left: 10px;                              
+                    }
+                }
+            }
+
+            .new, .chegirma {
+                width: 44px;
+                height: 22px;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 13px;
+                letter-spacing: 0em;
+                text-align: left;
+                padding: 5px 8px;
+            }
+        }
+    }
+}

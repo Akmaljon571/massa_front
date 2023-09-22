@@ -13,6 +13,7 @@ function Category() {
         <>
             <Header />
                 <Main>
+                    <Line children={'kaws product'} />
                     <Products children={children} />
                     <Pagination />
                     <Line children={'taqir tuqur'} />
