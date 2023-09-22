@@ -1,0 +1,119 @@
+.products {
+    
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: space-between;
+    }
+
+    &-card {
+        width: 334px;
+        height: 447px;
+        background-color: #fff;
+        border-radius: 24px;
+        position: relative;
+        cursor: pointer;
+
+        .top {
+            padding: 27px;
+            width: 334px;
+            height: 334px;
+            border-radius: 24px;
+            background-color: #fff;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+
+            .hear {
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                cursor: pointer;
+            }
+    
+            .main-img {
+                border-radius: 24px;
+                margin: 0 auto;
+            }
+        }
+
+        .bottom {
+            background-color: #F5F5F5;
+            height: 150px;
+            margin-top: -37px;
+            border-radius: 24px;
+            position: relative;
+            padding: 20px;
+            padding-top: 55px;
+            width: 100%;
+            z-index: 0;
+
+            h3 {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 22px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-bottom: 12px;
+                width: 80%;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 19px;
+                letter-spacing: 0em;
+                text-align: left;
+                text-transform: uppercase;
+
+                del {
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 14px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    margin-left: 16px;
+                }
+            }
+
+            .del {
+                color: #FF0000;
+            }
+        }
+
+        .new {
+            position: absolute;
+            background-color:#265AD9;
+            font-size: 14px;
+            font-weight: 800;
+            line-height: 17px;
+            letter-spacing: 0em;
+            text-transform: uppercase;
+            z-index: 22;
+            padding: 9px 19px;
+            top: -0.3px;
+            left: 0px;
+            color: #fff;
+            border-radius: 24px 0px 24px 0px;
+        }
+
+        .chegirma {
+            position: absolute;
+            background-color: #F91B1B;
+            font-size: 14px;
+            font-weight: 800;
+            line-height: 17px;
+            letter-spacing: 0em;
+            text-transform: uppercase;
+            z-index: 22;
+            padding: 9px 19px;
+            top: -0.3px;
+            left: 0px;
+            color: #fff;
+            border-radius: 24px 0px 24px 0px;
+        }
+    }
+}

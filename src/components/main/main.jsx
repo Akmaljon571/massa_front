@@ -1,9 +1,9 @@
 import './main.scss'
 
-function Main() {
+function Main({ children }) {
     return (
         <main> 
-           Main
+           {children}
         </main>
     )
 }

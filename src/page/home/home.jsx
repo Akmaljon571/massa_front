@@ -1,14 +1,17 @@
 import { Header, Main, Footer, Carousel, Hero, HeroImg, Brand } from '../../components'
+import HomePro from '../../html/home-pro';
 
 function Home() {
     return ( 
        <>
             <Header />
             <Carousel />
-            <Hero />
-            <HeroImg />
-            <Brand />
-            <Main />
+            <Main>
+                <Hero />
+                <HeroImg />
+                <HomePro />
+                <Brand />
+            </Main>
             <Footer />
        </>
     );

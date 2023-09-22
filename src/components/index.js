@@ -6,6 +6,7 @@ import Carousel from "./carousel/carousel";
 import Hero from "./hero/hero";
 import HeroImg from "./hero_img/hero_img";
 import Brand from "./brand/brand";
+import Products from "./products/products";
 
 export { 
     Header, 
@@ -15,5 +16,6 @@ export {
     Carousel,
     Hero,
     HeroImg,
-    Brand
+    Brand,
+    Products
 }
