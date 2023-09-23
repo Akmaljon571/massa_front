@@ -18,7 +18,6 @@ function HeroList() {
         .then(data => setCategory(data))
     }, [setCategory]);
     
-
     return (  
         <section className={openCategory ? "hero-list" : "hero-list close"}>
             <ul className="top">

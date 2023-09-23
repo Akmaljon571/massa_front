@@ -9,6 +9,8 @@ import Brand from "./brand/brand";
 import Products from "./products/products";
 import Pagination from "./pagination/pagination";
 import HeroList from "./heroList/heroList";
+import HeroLike from "./like/like";
+import HeroOrder from "./order/order";
 
 export { 
     Header, 
@@ -21,5 +23,7 @@ export {
     Brand,
     Products,
     Pagination,
-    HeroList
+    HeroList,
+    HeroLike,
+    HeroOrder
 }
