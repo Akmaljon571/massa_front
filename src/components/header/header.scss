@@ -10,6 +10,8 @@
     padding: 4px;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 3;
 
     &_left {
         display: flex;

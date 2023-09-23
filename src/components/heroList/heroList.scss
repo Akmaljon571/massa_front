@@ -1,0 +1,135 @@
+.hero-list {
+    background-color: #262626;
+    margin-top: -100px;
+    position: relative;
+    z-index: 0;
+    border-radius: 0 0 14px 14px;
+    margin-bottom: 80px;
+
+    & * {
+        transition: all 0.5s;
+    }
+    
+    .top {
+        padding: 104px 514px 40px 36px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+
+        li {
+            padding: 11px 16px 11px 16px;
+            background-color: #808080;
+            color: #0D0D0D;
+            border-radius: 18px;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 17px;
+            letter-spacing: 0em;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .active {
+            background-color: #F1C05B;
+        }
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 11px 15px 15px 36px;
+        border-top: 1px solid #333333;
+        
+        p {
+            color: #808080;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 17px;
+            letter-spacing: 0em;
+        }
+
+        button {
+            padding: 15px 13px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.close {
+    padding: 40px 66px 10px 36px;
+
+    .top {
+        flex-wrap: nowrap;
+        overflow: scroll;
+        padding: 0;
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        
+    }
+
+    .bottom {
+        padding: 0;
+        border: none;
+
+        p {
+            display: none;
+        }
+
+        button {
+            position: absolute;
+            right: 20px;
+            top: 30px;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .hero-list {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+
+        .top {
+            padding: 16px;
+        }
+
+        .bottom {
+            border: none;
+            padding: 16px;
+            padding-bottom: 0;
+            border-bottom: 1px solid #333333;
+        }
+    }
+
+    .close {
+        padding: 0;
+
+        .bottom {
+            border: none;
+            padding: 50px 16px 16px 16px;
+
+            p {
+                display: block;
+                padding-left: 0;
+            }
+
+            button {
+                top: 40px;
+                right: 10px;
+            }
+        }
+
+        .top {
+            display: none;
+        }
+    }
+}

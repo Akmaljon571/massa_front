@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { Footer, Header, Main, Pagination, Products } from "../../components";
+import { Footer, Header, HeroList, Main, Pagination, Products } from "../../components";
 import useStart from "../../hooks/useStart";
 import Line from "../../html/line";
 
@@ -13,6 +13,7 @@ function Category() {
         <>
             <Header />
                 <Main>
+                    <HeroList />
                     <Line children={'kaws product'} />
                     <Products children={children} />
                     <Pagination />
