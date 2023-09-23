@@ -3,11 +3,12 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { api } from "../../content/start";
 import vector from '../../img/Vector 255 OQ.svg'
 import './heroList.scss'
+import useStart from "../../hooks/useStart";
 
 function HeroList() {
     const location = useLocation().pathname.split('/')[2]
     const [category, setCategory] = useState([]);
-    const [open, setOpen] = useState(true);
+    const { openCategory, setOpenCategory } = useStart()
     const findCategory = category.find(e => e._id === location)
     const navigate = useNavigate()
 
@@ -19,7 +20,7 @@ function HeroList() {
     
 
     return (  
-        <section className={open ? "hero-list" : "hero-list close"}>
+        <section className={openCategory ? "hero-list" : "hero-list close"}>
             <ul className="top">
                 {category?.length ?
                     category.map((e, i) => (
@@ -31,7 +32,7 @@ function HeroList() {
             </ul>
             <div className="bottom">
                 <p>{findCategory ? findCategory?.title : null}</p>
-                <button onClick={() => setOpen(!open)}><img src={vector} alt="Arrov" /></button>
+                <button onClick={() => setOpenCategory(!openCategory)}><img src={vector} alt="Arrov" /></button>
             </div>
         </section>
     );

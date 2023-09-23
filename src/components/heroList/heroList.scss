@@ -6,12 +6,12 @@
     border-radius: 0 0 14px 14px;
     margin-bottom: 80px;
 
-    & * {
-        transition: all 0.5s;
-    }
+    // & * {
+    //     transition: all 0.1s;
+    // }
     
     .top {
-        padding: 104px 514px 40px 36px;
+        padding: 64px 514px 40px 36px;
         display: flex;
         align-items: center;
         gap: 12px;

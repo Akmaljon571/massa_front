@@ -3,12 +3,15 @@ import order from '../../img/shop.svg'
 import profile from '../../img/person.svg'
 import logo from '../../img/logo.svg'
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { api } from '../../content/start';
 import './header.scss'
+import useStart from '../../hooks/useStart';
 
 function Header() {
     const [category, setCategory] = useState([]);
+    const { openCategory } = useStart()
+    const location = useLocation().pathname.split('/')[1] === 'category' ? true : false
 
     useEffect(() => {
         fetch(api + 'category')
@@ -39,7 +42,7 @@ function Header() {
                         <img src={logo} alt="Logo" />
                     </Link>
                     <div>
-                        Menu
+                        {openCategory && location ? null : 'Menu'}
                     </div>
                 </div>
                 <div className="header_right">
