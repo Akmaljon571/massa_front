@@ -1,11 +1,10 @@
-import { Header, Main, Footer, Carousel, Hero, HeroImg, Brand } from '../../components'
+import { Main, Carousel, Hero, HeroImg, Brand } from '../../components'
 import Acessuars from '../../html/acessuars';
 import HomePro from '../../html/home-pro';
 
 function Home() {
     return ( 
        <>
-            <Header />
             <Carousel />
             <Main>
                 <Hero />
@@ -14,7 +13,6 @@ function Home() {
                 <Brand />
                 <Acessuars />
             </Main>
-            <Footer />
        </>
     );
 }

@@ -1,11 +1,13 @@
 import './App.scss';
-import { Container } from './components';
+import { Container, Footer, Header } from './components';
 import Routers from './routes/routes';
 
 function App() {
     return (
       <Container>
+        <Header />
         <Routers />
+        <Footer />
       </Container>
     )
 }

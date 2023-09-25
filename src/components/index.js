@@ -11,6 +11,7 @@ import Pagination from "./pagination/pagination";
 import HeroList from "./heroList/heroList";
 import HeroLike from "./like/like";
 import HeroOrder from "./order/order";
+import Error from "./error/error";
 
 export { 
     Header, 
@@ -25,5 +26,6 @@ export {
     Pagination,
     HeroList,
     HeroLike,
-    HeroOrder
+    HeroOrder,
+    Error
 }
