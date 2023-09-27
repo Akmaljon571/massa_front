@@ -12,6 +12,7 @@ import HeroList from "./heroList/heroList";
 import HeroLike from "./like/like";
 import HeroOrder from "./order/order";
 import Error from "./error/error";
+import OnePro from "./onePro/onePro";
 
 export { 
     Header, 
@@ -27,5 +28,6 @@ export {
     HeroList,
     HeroLike,
     HeroOrder,
-    Error
+    Error,
+    OnePro
 }
