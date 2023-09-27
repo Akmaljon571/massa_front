@@ -18,8 +18,6 @@ function Products({ children }) {
     const category = children.split(', ')[2] || ''
     const navigate = useNavigate()
 
-    console.log(active)
-
     const clickLike = (e, find) => {
         const _class = e.target.className.split(' ')[0]
 
@@ -37,6 +35,11 @@ function Products({ children }) {
                     body: JSON.stringify({
                         pro_id: find._id
                     })
+                })
+                .then(re => {
+                    if (re.ok) {
+                        setCount(count + 1)
+                    }
                 })
             } else {
                 setActive(active.filter(el => el !== find._id))
@@ -59,7 +62,8 @@ function Products({ children }) {
             const a = product.filter(e => e.like?.find(el => user.like?.find(w => w === el)) ? e._id : null) 
             setActive(a.map(e => e._id)) 
         }
-    }, [product, user, active]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [product, user]);
 
     useEffect(() => {
         if (category) {
