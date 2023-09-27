@@ -11,27 +11,140 @@
     // }
     
     .top {
-        padding: 64px 514px 40px 36px;
+        padding: 50px 32px;
         display: flex;
-        align-items: center;
-        gap: 12px;
+        align-items: flex-start;
         flex-wrap: wrap;
+        gap: 25px 135px;
+        height: 550px;
+        overflow: scroll;
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
 
-        li {
-            padding: 11px 16px 11px 16px;
-            background-color: #808080;
-            color: #0D0D0D;
-            border-radius: 18px;
-            font-size: 12px;
-            font-weight: 700;
-            line-height: 17px;
-            letter-spacing: 0em;
-            cursor: pointer;
-            user-select: none;
+        &::-webkit-scrollbar {
+            display: none;
         }
 
-        .active {
-            background-color: #F1C05B;
+        li {
+            width: 334px;
+            height: 447px;
+            background-color: #fff;
+            border-radius: 24px;
+            position: relative;
+            cursor: pointer;
+            border: 1px solid #333;
+
+            .like-top {
+                padding: 27px;
+                width: 334px;
+                height: 334px;
+                border-radius: 24px;
+                background-color: #fff;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
+
+                .hear {
+                    position: absolute;
+                    top: 15px;
+                    right: 20px;
+                    cursor: pointer;
+                    z-index: 500;
+
+                    &-img {
+                        top: 50px;
+                        
+                    }
+                }
+        
+                .main-img {
+                    border-radius: 24px;
+                    margin: 0 auto;
+                }
+            }
+
+            .like-bottom {
+                background-color: #333;
+                height: 150px;
+                margin-top: -37px;
+                border-radius: 24px;
+                position: relative;
+                padding: 20px;
+                padding-top: 55px;
+                width: 100%;
+                z-index: 0;
+
+                & * {
+                    color: #fff;
+                }
+
+                h3 {
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 22px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    margin-bottom: 12px;
+                    width: 80%;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 19px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    text-transform: uppercase;
+                    color: #999999;
+
+                    del {
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 14px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        margin-left: 16px;
+                    }
+                }
+
+                .del {
+                    color: #FF0000;
+                }
+            }
+
+            .new {
+                position: absolute;
+                background-color:#265AD9;
+                font-size: 14px;
+                font-weight: 800;
+                line-height: 17px;
+                letter-spacing: 0em;
+                text-transform: uppercase;
+                z-index: 22;
+                padding: 9px 19px;
+                top: -0.3px;
+                left: 0px;
+                color: #fff;
+                border-radius: 24px 0px 24px 0px;
+            }
+
+            .chegirma {
+                position: absolute;
+                background-color: #F91B1B;
+                font-size: 14px;
+                font-weight: 800;
+                line-height: 17px;
+                letter-spacing: 0em;
+                text-transform: uppercase;
+                z-index: 22;
+                padding: 9px 19px;
+                top: -0.3px;
+                left: 0px;
+                color: #fff;
+                border-radius: 24px 0px 24px 0px;
+            }
         }
     }
 
@@ -63,6 +176,74 @@
 
         button {
             transform: rotate(180deg);
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .like {
+        .top {
+            padding: 50px 10px;
+            gap: 10px;
+
+            .like-card {
+                width: 150px;
+                height: 254px;
+        
+                .like-top {
+                    width: 150px;
+                    height: 160px;
+        
+                    .main-img {
+                        width: 132px;
+                        height: 120px;
+                    }
+                }
+        
+                .like-bottom {
+                    height: 130px;
+                    padding: 12px;
+                    padding-top: 47px;
+        
+                    h3 {
+                        font-size: 12px;
+                        font-weight: 700;
+                        line-height: 14px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                    }
+        
+                    p {
+                        font-size: 12px;
+                        font-weight: 600;
+                        line-height: 14px;
+                        letter-spacing: 0em;
+                        text-align: left;   
+                        display: flex;
+                        align-items: flex-end;
+                        
+                        del {
+                            font-size: 10px;
+                            font-weight: 400;
+                            line-height: 12px;
+                            letter-spacing: 0.02em;
+                            text-align: left;  
+                            margin-left: 10px;                              
+                        }
+                    }
+                }
+        
+                .new, .chegirma {
+                    width: 44px;
+                    height: 22px;
+                    font-size: 10px;
+                    font-weight: 600;
+                    line-height: 13px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    padding: 5px 8px;
+                }
+            }
         }
     }
 }
