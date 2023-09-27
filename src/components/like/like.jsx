@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import vector from '../../img/Vector 255 OQ.svg'
 import { api } from '../../content/start';
 import { useNavigate } from 'react-router-dom'
-import Err from '../../html/err';
+import err from '../../img/error-6482984_960_720.webp'
 import img from '../../img/rasm6.png'
 import activeLike from '../../img/active-like.svg'
 import './like.scss'
@@ -73,7 +73,7 @@ function HeroLike() {
                         </div>
                     </li>
                     ))
-                : <Err />}
+                : <img width={400} style={{marginLeft: '450px', marginTop: "-33px"}} src={err} alt="Error page" />}
             </ul>
             <div className={openCategory ? "bottom" : "bottom bottom-close"}>
                 <p>Like</p>
