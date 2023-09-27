@@ -16,7 +16,6 @@ function OnePro() {
         .then(data => setOne(data))
     }, [location]);
 
-    console.log(one)
     return (  
         <section className='onePro'>
             <div className="left">

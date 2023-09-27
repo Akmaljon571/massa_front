@@ -1,20 +1,65 @@
 import { useEffect, useState } from "react";
 import { api } from "../../content/start";
+import { useNavigate } from "react-router-dom";
 import img from '../../img/rasm6.png'
 import hear from '../../img/like.svg'
+import activeLike from '../../img/active-like.svg'
+import useStart from "../../hooks/useStart";
 import './products.scss'
-import { useNavigate } from "react-router-dom";
 
 function Products({ children }) {
     const [product, setProduct] = useState([]);
+    const [user, setUser] = useState({});
+    const [active, setActive] = useState([]);
+    const [count, setCount] = useState(0);
+    const { token } = useStart()
     const page = children.split(',')[0]
     const nechta = children.split(',')[1]
     const category = children.split(', ')[2] || ''
     const navigate = useNavigate()
 
-    // const clickLike = () => {
+    console.log(active)
 
-    // }
+    const clickLike = (e, find) => {
+        const _class = e.target.className.split(' ')[0]
+
+        if (_class === 'likeActive') {
+            const findLike = find.like?.find(el => user?.like?.find(w => w === el))
+            if (!active.find(el => el === find._id)) {
+                setActive([...active, find._id])
+                fetch(api + 'user/like', {
+                    method: 'POST',
+                    headers: {
+                        "autharization": token,
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        pro_id: find._id
+                    })
+                })
+            } else {
+                setActive(active.filter(el => el !== find._id))
+                fetch(api + `user/like/${findLike}`, {
+                    method: 'DELETE',
+                    headers: {
+                        "autharization": token,
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                })
+            }    
+        } else {
+            navigate('/product/' + find._id)
+        }
+    }
+
+    useEffect(() => {
+        if (!active?.length) {
+            const a = product.filter(e => e.like?.find(el => user.like?.find(w => w === el)) ? e._id : null) 
+            setActive(a.map(e => e._id)) 
+        }
+    }, [product, user, active]);
 
     useEffect(() => {
         if (category) {
@@ -27,14 +72,24 @@ function Products({ children }) {
             .then(re => re.json())
             .then(data => setProduct(data))
         }
-    }, [setProduct, category, nechta, page]);
+
+        if (token) {
+            fetch(api + 'user/one', {
+                headers: {
+                    "autharization": token
+                }
+            })
+            .then(re => re.json())
+            .then(data => setUser(data))
+        }
+    }, [category, nechta, page, token, count]);
 
     return ( 
         <section className="products">
             <ul className="products-list">
                 {product.length ? 
                 product.map((e, i) => (
-                    <li onClick={() => navigate('/product/' + e._id)} key={i} className="products-card">
+                    <li onClick={(t) => clickLike(t, e)} key={i} className="products-card">
                         {e._id.split('').reverse().find(w => Number(w)) % 4 === 0 ? 
                             <span className="new">New</span> 
                         : null}
@@ -42,9 +97,13 @@ function Products({ children }) {
                             <span className="chegirma">{e.chegirma}</span>
                          : null}
                         <div className="top">
-                            <div className="hear">
-                                {/* <img src="" alt="" /> tokenlar tekshiruvidan keyin userlarni ozgarishlarni hammasini togirlab keyin like bosishni qilaman */}
-                                <img className="hear-img" src={hear} alt="Head icon" />
+                            <div className="likeActive hear">
+                                {active.find(el => el === e._id) ?
+                                    <img className={!active.find(el => el === e._id) ? "likeActive none" : "likeActive"} width={22} height={22} src={activeLike} alt="Active Like" />
+                                : 
+                                    <img width={22} height={22} className={!active.find(el => el === e._id) ? "likeActive none" : "likeActive"} src={hear} alt="Head icon" />}
+                                {active.find(el => el === e._id) ?
+                                null : <img width={22} height={22} className={active.find(el => el === e._id) ? "likeActive none" : "likeActive"} src={hear} alt="Head icon" />}
                             </div>
                             <img className="main-img" width={265} height={265} src={img} alt="Icon" />
                         </div>

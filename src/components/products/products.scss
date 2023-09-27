@@ -33,6 +33,12 @@
                 top: 15px;
                 right: 20px;
                 cursor: pointer;
+                z-index: 500;
+
+                &-img {
+                    top: 50px;
+                    
+                }
             }
     
             .main-img {
