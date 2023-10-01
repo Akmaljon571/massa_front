@@ -11,6 +11,7 @@ import useStart from '../../hooks/useStart';
 function Header() {
     const [category, setCategory] = useState([]);
     const { openCategory } = useStart()
+    const { token } = useStart()
     const location = useLocation().pathname.split('/')[1] === 'category' ? true : false
 
     useEffect(() => {
@@ -49,7 +50,7 @@ function Header() {
                     <i>English</i>
                     <hr className='hr' />
                     <div className="header_page">
-                        <Link to="/profile">
+                        <Link to={token ? "/profile" : "/login"}>
                             <img src={profile} alt="Profile icon" />
                         </Link>
                         <hr />

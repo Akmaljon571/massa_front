@@ -9,6 +9,7 @@
     list-style-type: none;
     color: #0D0D0D;
     font-family: sans-serif;
+    user-select: none;
 }
 
 body {
@@ -38,6 +39,6 @@ body {
 
   @media screen and (max-width: 360px) {
     .media_none {
-      display: none;
+      display: none !important;
     }
   }

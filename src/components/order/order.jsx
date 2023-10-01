@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react';
 import vector from '../../img/Vector 255 OQ.svg'
-import { api } from '../../content/start';
 import img from '../../img/error-6482984_960_720.webp'
-import './order.scss'
 import useStart from '../../hooks/useStart';
-import { useNavigate } from 'react-router-dom';
 import nuqta from '../../img/nuqta.svg'
 import del from '../../img/del.png'
+import { useEffect, useState } from 'react';
+import { api } from '../../content/start';
+import { useNavigate } from 'react-router-dom';
 import { message } from 'antd';
+import './order.scss'
 
 function HeroOrder() {
     const [ openOrder, setOpenOrder ] = useState(true)

@@ -13,6 +13,7 @@ import HeroLike from "./like/like";
 import HeroOrder from "./order/order";
 import Error from "./error/error";
 import OnePro from "./onePro/onePro";
+import UserProfile from "./profile/profile";
 
 export { 
     Header, 
@@ -29,5 +30,6 @@ export {
     HeroLike,
     HeroOrder,
     Error,
-    OnePro
+    OnePro,
+    UserProfile
 }
