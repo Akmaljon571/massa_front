@@ -1,7 +1,9 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { api } from '../../content/start';
 import arrov from '../../img/Vector 255.svg'
+import useStart from '../../hooks/useStart';
+import gif from '../../img/YouTube_loading_symbol_3_(transparent).gif'
 import './onePro.scss'
 
 function OnePro() {
@@ -9,12 +11,36 @@ function OnePro() {
     const [one, setOne] = useState({});
     const [carousel, setCarousel] = useState(0);
     const [qoshimcha, setQoshimcha] = useState(1);
+    const [load, setLoad] = useState(false);
+    const { token } = useStart()
+    const navigate = useNavigate()
 
     useEffect(() => {
         fetch(api + `pro/${location}`)
         .then(re => re.json())
         .then(data => setOne(data))
     }, [location]);
+
+    const add = () => {
+        setLoad(true)
+        if (token) {
+            fetch(api + 'user/order', {
+                method: "POST",
+                headers: {
+                    "autharization": token,
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    product: one._id,
+                    pro_id: one.pro[carousel]?._id
+                })
+            }) 
+            .then(re => re.ok ? navigate('/order') : "")
+        } else {
+            navigate('/login')
+        }
+    }
 
     return (  
         <section className='onePro'>
@@ -71,8 +97,8 @@ function OnePro() {
                     : null}
                 </ul>
                 <div className='btns'>
-                    <button>add to cart</button>
-                    <button className='buy'>BUY NOW</button>
+                    <button className={load ? 'loading-btn' : ""} onClick={add}>{load ? <img src={gif} alt='Loading' /> : 'add to cart'}</button>
+                    <button onClick={() => navigate('/buy')} className='buy'>BUY NOW</button>
                 </div>
                 <div className='qoshimcha'>
                     {qoshimcha === 1 ? <>

@@ -11,6 +11,8 @@ function Routers () {
       <Route path='/like' element={<Like />} />
       <Route path='/order' element={<Order />} />
       <Route path='/product/*' element={<Product />} />
+      {/* <Route path='/buy' element={} /> */}
+      {/* <Route path='/login' element={} /> */}
       <Route path='/*' element={<Error />} />
     </Routes>
   )

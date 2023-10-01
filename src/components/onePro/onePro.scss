@@ -240,6 +240,17 @@
                 color: #FAFAFA;
             }
 
+            .loading-btn {
+                width: 240px;
+                padding: 0;
+                height: 60px;
+                
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
             .buy {
                 background-color: #F1C25F;
                 color: #0D0D0D;
@@ -322,6 +333,17 @@
             .btns {
                 button {
                     padding: 19px 24px;
+                }
+
+                .loading-btn {
+                    padding: 19px 24px;
+                    width: 160px;
+                    height: auto;
+                    
+                    img {
+                        width: 15px;
+                        height: 15px;
+                    }
                 }
             }
         }

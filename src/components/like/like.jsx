@@ -6,12 +6,13 @@ import err from '../../img/error-6482984_960_720.webp'
 import img from '../../img/rasm6.png'
 import activeLike from '../../img/active-like.svg'
 import './like.scss'
+import useStart from '../../hooks/useStart';
 
 function HeroLike() {
     const [ openCategory, setOpenCategory ] = useState(true)
     const [like, setLike] = useState([]);
     const navigate = useNavigate()
-    const token = JSON.parse(localStorage.getItem('token'))
+    const { token } = useStart()
 
     useEffect(() => {
         if (token) {
