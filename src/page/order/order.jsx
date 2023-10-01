@@ -1,13 +1,11 @@
-import { HeroOrder, Main, Pagination, Products } from "../../components";
+import { HeroOrder, Main, Products } from "../../components";
 
 function Order() {
     return (  
         <>
             <Main>
                 <HeroOrder />
-                <Products children={'1, 16'} />
-                <Pagination />
-                <Products children={'2, 8'} />
+                <Products children={'1, 8'} />
             </Main>
         </>
     );

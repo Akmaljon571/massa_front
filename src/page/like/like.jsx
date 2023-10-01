@@ -1,13 +1,11 @@
-import { HeroLike, Main, Pagination, Products } from "../../components";
+import { HeroLike, Main, Products } from "../../components";
 
 function Like() {
     return (  
         <>
             <Main>
                 <HeroLike />
-                <Products children={'1, 16'} />
-                <Pagination />
-                <Products children={'2, 8'} />
+                <Products children={'1, 8'} />
             </Main>
         </>
     );

@@ -6,20 +6,26 @@ import hear from '../../img/like.svg'
 import activeLike from '../../img/active-like.svg'
 import useStart from "../../hooks/useStart";
 import './products.scss'
+import { message } from 'antd';
 
 function Products({ children }) {
     const [product, setProduct] = useState([]);
     const [user, setUser] = useState({});
     const [active, setActive] = useState([]);
-    const [count, setCount] = useState(0);
-    const { token } = useStart()
+    const { token, counts, setCounts } = useStart()
     const page = children.split(',')[0]
     const nechta = children.split(',')[1]
     const category = children.split(', ')[2] || ''
     const navigate = useNavigate()
+    const [messageApi, contextHolder] = message.useMessage();
 
     const clickLike = (e, find) => {
         const _class = e.target.className.split(' ')[0]
+        messageApi.open({
+            type: 'loading',
+            content: 'Action in progress..',
+            duration: 0,
+        });
 
         if (_class === 'likeActive') {
             const findLike = find.like?.find(el => user?.like?.find(w => w === el))
@@ -38,7 +44,12 @@ function Products({ children }) {
                 })
                 .then(re => {
                     if (re.ok) {
-                        setCount(count + 1)
+                        setCounts(counts + 1)
+                        messageApi.destroy()
+                        messageApi.open({
+                            type: 'success',
+                            content: 'This is a success message',
+                        })
                     }
                 })
             } else {
@@ -49,6 +60,16 @@ function Products({ children }) {
                         "autharization": token,
                         'Accept': 'application/json',
                         'Content-Type': 'application/json'
+                    }
+                })
+                .then(re => {
+                    if (re.ok) {
+                        setCounts(counts + 1)
+                        messageApi.destroy()
+                        messageApi.open({
+                            type: 'success',
+                            content: 'This is a success message',
+                        })
                     }
                 })
             }    
@@ -86,10 +107,11 @@ function Products({ children }) {
             .then(re => re.json())
             .then(data => setUser(data))
         }
-    }, [category, nechta, page, token, count]);
+    }, [category, nechta, page, token, counts]);
 
     return ( 
         <section className="products">
+            {contextHolder}
             <ul className="products-list">
                 {product.length ? 
                 product.map((e, i) => (

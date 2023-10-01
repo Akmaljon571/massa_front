@@ -7,12 +7,15 @@ import img from '../../img/rasm6.png'
 import activeLike from '../../img/active-like.svg'
 import './like.scss'
 import useStart from '../../hooks/useStart';
+import { message } from 'antd';
 
 function HeroLike() {
     const [ openCategory, setOpenCategory ] = useState(true)
     const [like, setLike] = useState([]);
     const navigate = useNavigate()
     const { token } = useStart()
+    const { counts, setCounts } = useStart()
+    const [messageApi, contextHolder] = message.useMessage();
 
     useEffect(() => {
         if (token) {
@@ -28,12 +31,17 @@ function HeroLike() {
         } else {
             setLike([])
         }
-    }, [setLike, token]);
+    }, [setLike, token, counts]);
 
     const clickLike = (e, find) => {
         const _class = e.target.className.split(' ')[0]
 
         if (_class === 'likeActive') {
+            messageApi.open({
+                type: 'loading',
+                content: 'Action in progress..',
+                duration: 0,
+            });
             fetch(api + `user/like/${find.like_id}`, {
                 method: 'DELETE',
                 headers: {
@@ -43,7 +51,14 @@ function HeroLike() {
                 }
             })
             .then(re => {
-                window.location.reload(true)
+                if (re.ok) {
+                    setCounts(counts + 1)
+                    messageApi.destroy()
+                    messageApi.open({
+                        type: 'success',
+                        content: 'This is a success message',
+                    })
+                }
             })
         } else {
             navigate('/product/' + find._id)
@@ -52,6 +67,7 @@ function HeroLike() {
 
     return (  
         <section className="like">
+            {contextHolder}
             <ul className={openCategory ? "top" : 'none'}>
                 {like?.length ?
                     like.map((e, i) => (
