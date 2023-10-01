@@ -90,7 +90,7 @@ function HeroLike() {
                         </div>
                     </li>
                     ))
-                : <img width={400} style={{marginLeft: '450px', marginTop: "-33px"}} src={err} alt="Error page" />}
+                : <img className='error_image' width={400} style={{marginLeft: '450px', marginTop: "-33px"}} src={err} alt="Error page" />}
             </ul>
             <div className={openCategory ? "bottom" : "bottom bottom-close"}>
                 <p>Like</p>

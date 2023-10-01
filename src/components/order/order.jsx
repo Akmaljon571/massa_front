@@ -164,10 +164,10 @@ function HeroOrder() {
                                         <h2>{e.title}</h2>
                                         <div className='color'>
                                             <div>
-                                                Size: <span>{e?.pro?.razmer}</span>
+                                                <p className='media_none'>Size:</p> <span>{e?.pro?.razmer}</span>
                                             </div>
                                             <hr />
-                                            Color: <mark style={{backgroundColor: e?.pro?.color, boxShadow: `0.5px 0.5px 5px ${e?.pro?.color}`}}></mark>
+                                            <p className='media_none'>Color:</p> <mark style={{backgroundColor: e?.pro?.color, boxShadow: `0.5px 0.5px 5px ${e?.pro?.color}`}}></mark>
                                         </div>
                                         <div className="card-bottom">
                                             <div className={e.chegirma ? 'active' : 'narx'}>
@@ -211,7 +211,7 @@ function HeroOrder() {
                             <button onClick={clear} className='clear'>clearance</button>
                         </div>
                     </div>
-                </> :  <img width={400} style={{marginLeft: '450px', marginTop: "17px"}} src={img} alt="Error page" /> } 
+                </> :  <img width={400} className='error_image' style={{marginLeft: '450px', marginTop: "17px"}} src={img} alt="Error page" /> } 
             </div>
             <div className={openOrder ? "bottom" : "bottom bottom-close"}>
                 <p>Order</p>

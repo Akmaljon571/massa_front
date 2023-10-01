@@ -376,3 +376,75 @@
         }
     }
 }
+
+@media screen and (max-width: 360px) {
+    .order {
+        
+        .top {
+            flex-direction: column;
+
+            .left {
+                width: 100%;
+                padding: 10px;
+                padding-top: 52px;
+
+                li {
+                    align-items: flex-start;
+                    min-height: 168px;
+                    height: 168px;
+
+                    .order-father {
+                        width: 104px;
+                        height: 104px;
+
+                        .order-image {
+                            width: 104px;
+                            height: 104px;
+                        }
+                    }
+
+                    .text {
+                        width: 60%;
+                        margin-left: 10px;
+
+                        h2 {
+                            width: 169px;
+                            font-size: 14px;
+                            font-weight: 700;
+                            line-height: 20px;
+                            letter-spacing: 0em;
+                        }
+
+                        .card-bottom {
+                            position: absolute;
+                            bottom: 10px;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                width: 85%;
+                height: auto;
+                padding: 20px;
+                margin: 20px;
+
+                .jami {
+                    width: 100px !important;
+                    padding: 6px 2px  !important;
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .error_image {
+        width: 100%;
+        height: auto;
+        margin-left: 0 !important;
+    }
+}
